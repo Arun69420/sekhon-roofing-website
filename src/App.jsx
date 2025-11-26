@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 import { Phone, Mail } from 'lucide-react';
 import React from 'react';
-import heroRoof from '../public/hero-roof.jpg';
-
+import heroRoof from './assets/hero-roof.jpg'; // IMPORTANT: this must exist in src/assets/
 
 function Card({ children }) {
   return (
@@ -42,7 +41,7 @@ function Button({ children }) {
 export default function App() {
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', color: '#222' }}>
-      
+
       {/* HERO SECTION */}
       <section
         style={{
@@ -50,7 +49,7 @@ export default function App() {
           padding: '110px 20px',
           textAlign: 'center',
           color: 'white',
-         backgroundImage: `linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(${heroRoof})`,
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(${heroRoof})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -76,7 +75,8 @@ export default function App() {
             marginBottom: '20px',
           }}
         >
-          Professional roofing services — new roofs, timber work, flat & slate roofs, gutters, fascias, and repairs.
+          Professional roofing services — new roofs, timber work, flat & slate roofs,
+          gutters, fascias and repairs.
         </motion.p>
 
         <motion.div
@@ -94,7 +94,7 @@ export default function App() {
         </motion.div>
       </section>
 
-      {/* SERVICES SECTION */}
+      {/* SERVICES */}
       <section style={{ padding: '40px 20px', maxWidth: '1000px', margin: 'auto' }}>
         <h2
           style={{
@@ -105,6 +105,7 @@ export default function App() {
         >
           Our Services
         </h2>
+
         <div
           style={{
             display: 'grid',
@@ -172,6 +173,7 @@ export default function App() {
       >
         © {new Date().getFullYear()} Sekhon Roofing Ltd. All rights reserved.
       </footer>
+
     </div>
   );
 }
