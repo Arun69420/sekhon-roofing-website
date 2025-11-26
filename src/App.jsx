@@ -1,19 +1,18 @@
 import { motion } from "framer-motion";
 import { Phone, Mail } from "lucide-react";
-import React from "react";
 import heroRoof from "./assets/hero-roof.jpg";
 
 export default function App() {
   return (
     <div style={{ fontFamily: "Arial, sans-serif", color: "#222" }}>
 
-      {/* TOP ORANGE BAR */}
+      {/* ORANGE TOP BAR */}
       <header
         style={{
           width: "100%",
           background: "#e66a1f",
           color: "white",
-          padding: "15px 25px",
+          padding: "15px 20px",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -23,85 +22,59 @@ export default function App() {
         }}
       >
         <h2 style={{ margin: 0 }}>Sekhon Roofing Ltd</h2>
-
-        <div style={{ display: "flex", gap: "25px", fontSize: "15px", flexWrap: "wrap" }}>
+        <div style={{ display: "flex", gap: "25px", fontSize: "15px" }}>
           <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
             <Phone size={16} /> 07415 293 877
           </span>
-
           <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
             <Mail size={16} /> sekhonroofinglimited@gmail.com
           </span>
         </div>
       </header>
 
-      {/* FULL IMAGE HERO SECTION */}
+      {/* HERO SECTION – FULL WIDTH */}
       <section
         style={{
-          width: "100%",
-          height: "380px",
-          backgroundImage: `url(${heroRoof})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          position: "relative",
+          display: "flex",
+          flexWrap: "wrap",
+          padding: "40px 6vw",
+          gap: "30px",
+          alignItems: "center",
+          backgroundColor: "#fff",
+          borderBottom: "1px solid #eee",
         }}
       >
-        {/* Optional dark overlay for readability */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background: "rgba(0,0,0,0.25)",
-          }}
-        ></div>
-
-        {/* Text over the image */}
-        <div
-          style={{
-            position: "relative",
-            zIndex: 2,
-            padding: "40px 25px",
-            maxWidth: "700px",
-          }}
-        >
+        {/* TEXT LEFT */}
+        <div style={{ flex: "1 1 280px", minWidth: 260 }}>
           <motion.h1
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            style={{
-              fontSize: "42px",
-              color: "white",
-              fontWeight: "bold",
-              marginBottom: "10px",
-              textShadow: "0px 0px 6px rgba(0,0,0,0.4)",
-            }}
+            transition={{ duration: 0.5 }}
+            style={{ fontSize: "34px", marginBottom: "10px" }}
           >
             Reliable Roofing Services You Can Trust
           </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
+          <p
             style={{
-              maxWidth: "520px",
-              fontSize: "18px",
-              color: "white",
               marginBottom: "18px",
-              textShadow: "0px 0px 6px rgba(0,0,0,0.4)",
+              fontSize: "15px",
+              color: "#555",
+              maxWidth: 480,
             }}
           >
-            Expert installation and repair of pitched and flat roofs, guttering,
-            fascias and all timber work. Proudly serving the local area.
-          </motion.p>
+            Sekhon Roofing Ltd provides expert installation, repair and
+            maintenance for pitched and flat roofs, gutters, fascias and all
+            timber work. Professional service across the local area.
+          </p>
 
           <button
             style={{
               background: "#e66a1f",
               color: "white",
-              padding: "12px 20px",
-              borderRadius: "10px",
+              padding: "12px 22px",
               border: "none",
+              borderRadius: "10px",
               cursor: "pointer",
               fontSize: "16px",
             }}
@@ -109,17 +82,24 @@ export default function App() {
             Request a Free Quote
           </button>
         </div>
+
+        {/* IMAGE RIGHT – FULL FIT, NOT CROPPED */}
+        <div style={{ flex: "1 1 360px", minWidth: 300 }}>
+          <img
+            src={heroRoof}
+            alt="Recent roofing project"
+            style={{
+              width: "100%",
+              borderRadius: "14px",
+              objectFit: "cover",
+            }}
+          />
+        </div>
       </section>
 
       {/* SERVICES SECTION */}
-      <section style={{ padding: "50px 25px", maxWidth: "1100px", margin: "auto" }}>
-        <h2
-          style={{
-            fontSize: "30px",
-            textAlign: "center",
-            marginBottom: "25px",
-          }}
-        >
+      <section style={{ padding: "40px 20px", maxWidth: 1000, margin: "auto" }}>
+        <h2 style={{ fontSize: "28px", textAlign: "center", marginBottom: 30 }}>
           Our Roofing Services
         </h2>
 
@@ -140,11 +120,11 @@ export default function App() {
             <div
               key={s}
               style={{
-                borderRadius: "16px",
-                padding: "20px",
-                background: "white",
-                textAlign: "center",
+                borderRadius: 16,
                 boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                padding: "20px",
+                textAlign: "center",
+                backgroundColor: "white",
               }}
             >
               {s}
@@ -153,7 +133,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* CONTACT */}
+      {/* CONTACT SECTION */}
       <section
         style={{
           background: "#f5f5f5",
@@ -161,16 +141,23 @@ export default function App() {
           textAlign: "center",
         }}
       >
-        <h2 style={{ fontSize: "28px", marginBottom: "20px" }}>Get in Touch</h2>
+        <h2 style={{ fontSize: "28px", marginBottom: 20 }}>Get in Touch</h2>
 
-        <div style={{ fontSize: "18px", display: "flex", flexDirection: "column", gap: "10px", alignItems: "center" }}>
-          <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
+        <div
+          style={{
+            fontSize: "18px",
+            display: "flex",
+            flexDirection: "column",
+            gap: 10,
+            alignItems: "center",
+          }}
+        >
+          <div>
             <Phone /> 07415 293 877
-          </span>
-
-          <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
+          </div>
+          <div>
             <Mail /> sekhonroofinglimited@gmail.com
-          </span>
+          </div>
         </div>
 
         <button
@@ -182,17 +169,24 @@ export default function App() {
             border: "none",
             cursor: "pointer",
             fontSize: "16px",
-            marginTop: "20px",
+            marginTop: 20,
           }}
         >
           Request a Quote
         </button>
       </section>
 
+      {/* FOOTER */}
       <footer
         style={{
           textAlign: "center",
-          padding: "20px",
-          fontSize: "14px",
+          padding: 20,
+          fontSize: 14,
           color: "#777",
         }}
+      >
+        © {new Date().getFullYear()} Sekhon Roofing Ltd. All rights reserved.
+      </footer>
+    </div>
+  );
+}
