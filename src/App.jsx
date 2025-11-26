@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Phone, Mail } from 'lucide-react';
 import React from 'react';
+import heroRoof from '../public/hero-roof.jpg';
+
 
 function Card({ children }) {
   return (
@@ -48,8 +50,7 @@ export default function App() {
           padding: '110px 20px',
           textAlign: 'center',
           color: 'white',
-          backgroundImage:
-            "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/hero-roof.jpg')",
+         backgroundImage: `linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(${heroRoof})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
