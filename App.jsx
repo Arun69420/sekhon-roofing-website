@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { Phone, Mail } from 'lucide-react';
 import React from 'react';
-import heroRoof from './assets/hero-roof.jpg';
+import heroRoof from '/hero-roof.jpg';
+
 
 
 function Card({ children }) {
