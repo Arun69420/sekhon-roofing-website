@@ -153,6 +153,90 @@ export default function App() {
           ))}
         </div>
       </section>
+      <section
+  style={{
+    padding: "40px 20px",
+    maxWidth: "600px",
+    margin: "50px auto",
+    background: "#fff",
+    borderRadius: "12px",
+    boxShadow: "0 3px 10px rgba(0,0,0,0.1)",
+  }}
+>
+  <h2
+    style={{
+      textAlign: "center",
+      marginBottom: "20px",
+      fontSize: "26px",
+      color: "#222",
+    }}
+  >
+    Request a Free Quote
+  </h2>
+
+  <form
+    action="https://formsubmit.co/sekhonroofinglimited@gmail.com"
+    method="POST"
+    style={{ display: "flex", flexDirection: "column", gap: "15px" }}
+  >
+    {/* Prevent spam */}
+    <input type="hidden" name="_captcha" value="false" />
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      required
+      style={{
+        padding: "12px",
+        borderRadius: "8px",
+        border: "1px solid #ccc",
+        fontSize: "16px",
+      }}
+    />
+
+    <input
+      type="tel"
+      name="phone"
+      placeholder="Phone Number"
+      required
+      style={{
+        padding: "12px",
+        borderRadius: "8px",
+        border: "1px solid #ccc",
+        fontSize: "16px",
+      }}
+    />
+
+    <textarea
+      name="message"
+      placeholder="Describe your roofing issue"
+      rows="4"
+      required
+      style={{
+        padding: "12px",
+        borderRadius: "8px",
+        border: "1px solid #ccc",
+        fontSize: "16px",
+      }}
+    ></textarea>
+
+    <button
+      type="submit"
+      style={{
+        background: "#e66a1f",
+        color: "white",
+        padding: "14px",
+        border: "none",
+        borderRadius: "10px",
+        cursor: "pointer",
+        fontSize: "18px",
+      }}
+    >
+      Send Request
+    </button>
+  </form>
+</section>
+
 
       {/* CONTACT */}
       <section
