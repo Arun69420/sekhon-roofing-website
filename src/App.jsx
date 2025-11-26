@@ -44,32 +44,27 @@ function Button({ children }) {
 export default function App() {
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', color: '#222', backgroundColor: '#fafafa' }}>
-      {/* Top bar */}
-      <header
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          padding: '12px 6vw',
-          borderBottom: '1px solid #eee',
-          backgroundColor: 'white',
-          position: 'sticky',
-          top: 0,
-          zIndex: 20,
-        }}
-      >
-        <div style={{ fontSize: '20px', fontWeight: 'bold', color: ORANGE }}>
-          Sekhon Roofing Ltd
-        </div>
-        <div style={{ display: 'flex', gap: '18px', fontSize: '14px', alignItems: 'center', flexWrap: 'wrap' }}>
-          <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            <Phone size={16} /> 07415 293 877
-          </span>
-          <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            <Mail size={16} /> sekhonroofinglimited@gmail.com
-          </span>
-        </div>
-      </header>
+     <header
+  style={{
+    width: '100%',
+    background: '#e66a1f',
+    color: 'white',
+    padding: '15px 20px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    position: 'sticky',
+    top: 0,
+    zIndex: 30,
+  }}
+>
+  <h2 style={{ margin: 0 }}>Sekhon Roofing Ltd</h2>
+
+  <div style={{ display: 'flex', gap: '25px', fontSize: '15px', flexWrap: 'wrap' }}>
+    <span>07415 293 877</span>
+    <span>sekhonroofinglimited@gmail.com</span>
+  </div>
+</header>
 
       {/* Hero band with image */}
       <section
