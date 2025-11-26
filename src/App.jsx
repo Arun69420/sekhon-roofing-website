@@ -5,8 +5,7 @@ import heroRoof from "./assets/hero-roof.jpg";
 export default function App() {
   return (
     <div style={{ fontFamily: "Arial, sans-serif", color: "#222" }}>
-
-      {/* ORANGE TOP BAR */}
+      {/* TOP BAR */}
       <header
         style={{
           width: "100%",
@@ -19,38 +18,52 @@ export default function App() {
           position: "sticky",
           top: 0,
           zIndex: 30,
+          flexWrap: "wrap",
         }}
       >
-        <h2 style={{ margin: 0 }}>Sekhon Roofing Ltd</h2>
-        <div style={{ display: "flex", gap: "25px", fontSize: "15px" }}>
+        <h2 style={{ margin: 0, fontSize: "20px" }}>Sekhon Roofing Ltd</h2>
+
+        <div
+          style={{
+            display: "flex",
+            gap: "18px",
+            fontSize: "14px",
+            flexWrap: "wrap",
+            marginTop: "5px",
+          }}
+        >
           <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
             <Phone size={16} /> 07415 293 877
           </span>
+
           <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
             <Mail size={16} /> sekhonroofinglimited@gmail.com
           </span>
         </div>
       </header>
 
-      {/* HERO SECTION – FULL WIDTH */}
+      {/* HERO SECTION */}
       <section
         style={{
           display: "flex",
           flexWrap: "wrap",
-          padding: "40px 6vw",
-          gap: "30px",
+          padding: "35px 5vw",
+          gap: "20px",
           alignItems: "center",
           backgroundColor: "#fff",
-          borderBottom: "1px solid #eee",
         }}
       >
         {/* TEXT LEFT */}
-        <div style={{ flex: "1 1 280px", minWidth: 260 }}>
+        <div style={{ flex: "1 1 320px", minWidth: "280px" }}>
           <motion.h1
             initial={{ opacity: 0, y: -15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            style={{ fontSize: "34px", marginBottom: "10px" }}
+            style={{
+              fontSize: "30px",
+              marginBottom: "10px",
+              lineHeight: 1.25,
+            }}
           >
             Reliable Roofing Services You Can Trust
           </motion.h1>
@@ -58,9 +71,8 @@ export default function App() {
           <p
             style={{
               marginBottom: "18px",
-              fontSize: "15px",
+              fontSize: "16px",
               color: "#555",
-              maxWidth: 480,
             }}
           >
             Sekhon Roofing Ltd provides expert installation, repair and
@@ -72,42 +84,50 @@ export default function App() {
             style={{
               background: "#e66a1f",
               color: "white",
-              padding: "12px 22px",
+              padding: "14px 22px",
               border: "none",
               borderRadius: "10px",
               cursor: "pointer",
-              fontSize: "16px",
+              fontSize: "17px",
+              width: "100%",
+              maxWidth: "230px",
             }}
           >
             Request a Free Quote
           </button>
         </div>
 
-        {/* IMAGE RIGHT – FULL FIT, NOT CROPPED */}
-        <div style={{ flex: "1 1 360px", minWidth: 300 }}>
+        {/* IMAGE RIGHT */}
+        <div style={{ flex: "1 1 360px", minWidth: "280px" }}>
           <img
             src={heroRoof}
             alt="Recent roofing project"
             style={{
               width: "100%",
-              borderRadius: "14px",
+              borderRadius: "12px",
               objectFit: "cover",
             }}
           />
         </div>
       </section>
 
-      {/* SERVICES SECTION */}
-      <section style={{ padding: "40px 20px", maxWidth: 1000, margin: "auto" }}>
-        <h2 style={{ fontSize: "28px", textAlign: "center", marginBottom: 30 }}>
+      {/* SERVICES */}
+      <section style={{ padding: "35px 20px", maxWidth: 1100, margin: "auto" }}>
+        <h2
+          style={{
+            fontSize: "26px",
+            textAlign: "center",
+            marginBottom: "25px",
+          }}
+        >
           Our Roofing Services
         </h2>
 
         <div
           style={{
             display: "grid",
-            gap: "20px",
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+            gap: "15px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
           }}
         >
           {[
@@ -120,11 +140,12 @@ export default function App() {
             <div
               key={s}
               style={{
-                borderRadius: 16,
+                borderRadius: "16px",
                 boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
                 padding: "20px",
                 textAlign: "center",
                 backgroundColor: "white",
+                fontSize: "16px",
               }}
             >
               {s}
@@ -133,7 +154,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* CONTACT SECTION */}
+      {/* CONTACT */}
       <section
         style={{
           background: "#f5f5f5",
@@ -141,11 +162,11 @@ export default function App() {
           textAlign: "center",
         }}
       >
-        <h2 style={{ fontSize: "28px", marginBottom: 20 }}>Get in Touch</h2>
+        <h2 style={{ fontSize: "26px", marginBottom: "15px" }}>Get in Touch</h2>
 
         <div
           style={{
-            fontSize: "18px",
+            fontSize: "17px",
             display: "flex",
             flexDirection: "column",
             gap: 10,
@@ -164,12 +185,12 @@ export default function App() {
           style={{
             background: "#e66a1f",
             color: "white",
-            padding: "12px 20px",
+            padding: "12px 18px",
             borderRadius: "12px",
             border: "none",
             cursor: "pointer",
             fontSize: "16px",
-            marginTop: 20,
+            marginTop: "20px",
           }}
         >
           Request a Quote
@@ -180,9 +201,10 @@ export default function App() {
       <footer
         style={{
           textAlign: "center",
-          padding: 20,
-          fontSize: 14,
+          padding: "20px",
+          fontSize: "14px",
           color: "#777",
+          background: "#fff",
         }}
       >
         © {new Date().getFullYear()} Sekhon Roofing Ltd. All rights reserved.
