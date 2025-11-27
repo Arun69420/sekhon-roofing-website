@@ -78,7 +78,8 @@ export default function App() {
           >
             Sekhon Roofing Ltd provides expert installation, repair and
             maintenance for pitched and flat roofs, gutters, fascias and all
-            timber work. Professional service across the local area.
+            timber work. Professional roofing services across the London area.
+
           </p>
 
           {/* BUTTON THAT SCROLLS TO THE FORM */}
